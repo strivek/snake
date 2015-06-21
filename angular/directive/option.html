@@ -1,0 +1,13 @@
+<div class="container">
+	<select name="done1" id="" multiple ng-model="list1" >
+			<option ng-repeat="item in left" value="{{$index}}">{{item.name}}</option>
+	</select>
+
+	<select name="done2" id="" multiple ng-model="list2" >
+			<option ng-repeat="item in right" value="{{$index}}">{{item.name}}</option>
+	</select>
+	
+	<button ng-click="pullRight()" class="btnleft" >右移</button>
+	<button ng-click="pullLeft()" class="btnright">左移</button>
+
+</div>
