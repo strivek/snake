@@ -1,7 +1,6 @@
 (function(angular) {
 	'use strict'
 	var app = angular.module('optionsApp', []);
-
 	app.controller('optionController', function($scope) {
 		$scope.man = [{
 			name: "张三"
@@ -28,7 +27,7 @@
 				'left': "=",
 				'right': "="
 			},
-			templateUrl: "directive/option.html",
+			templateUrl: "option.html",
 			link: function(scope, iElm, iAttrs) {
 				// console.log(scope.left.pop(),scope.left.pop());
 				scope.list1 = [];

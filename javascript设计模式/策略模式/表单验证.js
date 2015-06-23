@@ -17,64 +17,45 @@ var strategies = {
 
 }
 
-var Validator  = function(){
+var Validator = function() {
 	this.cache = []; //保存校验规则
 }
 
-Validator.prototype.add = function(dom,rule,errorMsg) {
+Validator.prototype.add = function(dom, rule, errorMsg) {
 	var ary = rule.split(";");
-	this.cache.push(function  () {
+	this.cache.push(function() {
 		var strategy = ary.shift();
 		ary.unshift(dom.value);
 		ary.push(errorMsg);
-		return strategies[strategy].apply(dom,ary);
+		return strategies[strategy].apply(dom, ary);
 	})
 };
 
-validator.prototype.start =function  () {
-	for(var i=0,validateFunc;validateFunc = this.cache[i++];){
+validator.prototype.start = function() {
+	for (var i = 0, validateFunc; validateFunc = this.cache[i++];) {
 		var msg = validateFunc();
-		if(msg){
+		if (msg) {
 			return msg;
 		}
 	}
 }
 
-
-
-var validateFunc = function  () {
+var validateFunc = function() {
 	var validator = new validator();
-	validator.add(registerForm.userName,'isNonEmpty','用户名不能为空')；
-	validator.add(registerForm.password,'minLength:6','密码长度不能少于6位')；
-	validator.add(registerForm.phoneNumber,'isMobile','用户名不能为空')；
+	validator.add(registerForm.userName, 'isNonEmpty', '用户名不能为空')；
+	validator.add(registerForm.password, 'minLength:6', '密码长度不能少于6位')；
+	validator.add(registerForm.phoneNumber, 'isMobile', '用户名不能为空')；
 
 	var errorMsg = validator.start();
 	return errorMsg;
 }
 
-var registerForm  =document.getElementById('register');
+var registerForm = document.getElementById('register');
 
-registerForm.onSubmit = function(){
+registerForm.onSubmit = function() {
 	var errorMsg = validateFunc();
-	if(errorMsg){
+	if (errorMsg) {
 		alert(errorMsg);
 		return false;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
