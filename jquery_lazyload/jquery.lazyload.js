@@ -58,11 +58,13 @@
         }
 
         if(options) {
+            //兼容老版本，目测不需要
             /* Maintain BC for a couple of versions. */
             if (undefined !== options.failurelimit) {
                 options.failure_limit = options.failurelimit;
                 delete options.failurelimit;
             }
+            //兼容老版本，目测不需要
             if (undefined !== options.effectspeed) {
                 options.effect_speed = options.effectspeed;
                 delete options.effectspeed;
