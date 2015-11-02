@@ -6,7 +6,8 @@
   "dependencies": {
     "flux": "^2.0.0",
     "react": "^0.14.0",
-    "underscore": "^1.7.0"
+    "underscore": "^1.7.0",
+    "immutable":"^3.7.5"
   },
 
   "scripts": {
