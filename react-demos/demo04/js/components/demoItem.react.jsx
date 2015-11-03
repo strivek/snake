@@ -5,7 +5,9 @@ export var DemoItem = React.createClass({
 
     render:function(){
         return(
-            <li className="item">{this.props.name}</li>
+            <li className="nav-item">
+                <a className="nav-link" href="#">{this.props.name}</a>
+            </li>
         )
     }
 })

@@ -27,7 +27,7 @@ export var DemoList = React.createClass({
     },
     render: function () {
         return (
-            <ul className="list">
+            <ul className="nav nav-pills nav-stacked">
                 {this.props.list.map(function (value, key) {
                     return (
                         <DemoItem key={key} name={value}/>

@@ -1,4 +1,3 @@
-
 var React = require('../assets/react');
 
 /**
@@ -6,17 +5,28 @@ var React = require('../assets/react');
  */
 
 import {DemoList} from 'demoList.react';
+import {Content} from 'Content.react';
 
 export var ReactApp = React.createClass({
-    getInitialState:function(){
-      return{
-          list:['andy','job','eve']
-      }
+    getInitialState: function () {
+        return {
+            list: ['andy', 'job', 'eve']
+        }
     },
-    render:function(){
-        return (<div className="container" >
-            <DemoList  list={this.state.list} />
-        </div>);
+    render: function () {
+        return (
+            <div className="container-fluid">
+                <div className="row">
+                    <div className="col-md-3">
+                        <DemoList list={this.state.list}/>
+                    </div>
+                    <div className="col-md-9">
+                        <Content />
+                    </div>
+                </div>
+
+            </div>
+        );
     }
 });
 

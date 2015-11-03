@@ -8,5 +8,3 @@ import {ReactApp} from 'components/reactApp.react';
 
 
 ReactDOM.render(<ReactApp />, document.getElementById('reactApp'));
-
-
