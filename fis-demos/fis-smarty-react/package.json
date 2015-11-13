@@ -1,0 +1,25 @@
+{
+  "name": "fis-smarty-react",
+  "version": "1.0.0",
+  "description": "demo",
+  "main": "fis-conf.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "fis3",
+    "smarty",
+    "react"
+  ],
+  "author": "gaofei08",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^0.14.2",
+    "react-dom":"^0.14.2",
+    "flux": "^2.1.1",
+    "immutable": "^3.7.5"
+  }
+}
