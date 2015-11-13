@@ -5,8 +5,6 @@ fis.match('/js/*/**.jsx', {
     isMod: true
 });
 
-
-
 fis.hook('commonjs');
 
 fis.match('::package', {

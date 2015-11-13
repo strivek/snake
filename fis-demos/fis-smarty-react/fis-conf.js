@@ -7,25 +7,25 @@
 // 加载smarty
 fis.require('smarty')(fis);
 // 命名空间设置
+fis.set('namespace', 'select');
 fis
-    .set('namespace', 'selectGroup')
     .media('dev').match('*', {
         useHash: false,
         optimizer: null
     })
-    .match('**.js', {
+    .match('**.{jsx,js}', {
         isMod: true
     })
-    .match('static/assets/lib/**.js', {
+    .match('/static/assets/lib/**.js', {
+        isMod: true
+    })
+    .match('/static/assets/lib/mod.js', {
         isMod: false
     })
-    .match('**.jsx', {
-        isMod: true
+    .match('/static/*.jsx', {
+        isMod: false
     })
     .hook('commonjs')
-    .match('::package', {
-        postpackager: fis.plugin('loader')
-    })
     .match('{*.jsx,*:jsx}', {
         parser: fis.plugin('babel2'),
         rExt: '.js'

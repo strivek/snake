@@ -1,12 +1,10 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>fis3-smarty</title>
-    <script src="/static/assets/lib/mod.js"></script>
-</head>
-<body>
-    <p>加载页面成功</p>
-</body>
-</html>
+{%html framework="select:static/assets/lib/mod.js"%}
+  {%head%}
+    <meta charset='utf-8'>
+    <title>选单平台</title>
+    {%require name="select:static/app.jsx"%}
+  {%/head%}
+  {%body id="screen"%}
+    <div id="container"></div>
+  {%/body%}
+{%/html%}
